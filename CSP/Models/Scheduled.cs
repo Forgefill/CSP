@@ -1,6 +1,6 @@
 ﻿namespace CSP.Models
 {
-    public class ScheduledClass
+    public class Scheduled
     {
         public Subject Subject { get; set; }
         public Classroom Classroom { get; set; }

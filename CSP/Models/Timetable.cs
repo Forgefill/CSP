@@ -2,11 +2,11 @@
 {
     public class Timetable
     {
-        public List<ScheduledClass> ScheduledClasses { get; set; }
+        public List<Scheduled> ScheduledClasses { get; set; }
 
         public Timetable()
         {
-            ScheduledClasses = new List<ScheduledClass>();
+            ScheduledClasses = new List<Scheduled>();
         }
     }
 }

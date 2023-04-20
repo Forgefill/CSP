@@ -57,7 +57,7 @@ namespace CSPTimetable
                     {
                         foreach(var timeslot in Timeslots)
                         {
-                            var scheduledClass = new ScheduledClass
+                            var scheduled = new Scheduled
                             {
                                 Subject = subject,
                                 Professor = professor,
@@ -66,16 +66,16 @@ namespace CSPTimetable
                                 Timeslot = timeslot
                             };
 
-                            if(IsValidAssignment(timetable, scheduledClass))
+                            if(IsValidAssignment(timetable, scheduled))
                             {
-                                timetable.ScheduledClasses.Add(scheduledClass);
+                                timetable.ScheduledClasses.Add(scheduled);
 
                                 if(Backtrack(timetable, group))
                                 {
                                     return true;
                                 }
 
-                                timetable.ScheduledClasses.Remove(scheduledClass);
+                                timetable.ScheduledClasses.Remove(scheduled);
                             }
                         }
                     }
@@ -86,7 +86,7 @@ namespace CSPTimetable
         }
 
 
-        private bool IsValidAssignment(Timetable timetable, ScheduledClass scheduledClass)
+        private bool IsValidAssignment(Timetable timetable, Scheduled scheduledClass)
         {
             if(scheduledClass.Classroom.Capacity < scheduledClass.Group.NumberOfStudents)
             {

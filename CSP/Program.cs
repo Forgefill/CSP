@@ -9,25 +9,23 @@ namespace CSPTimetable
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+
+
             var subjects = new List<Subject>
             {
-                new Subject { Id = 1, Name = "OOP", IsLecture = true },
-                new Subject { Id = 2, Name = "DB", IsLecture = true },
-                new Subject { Id = 3, Name = "Programming Fundamentals", IsLecture = true },
-                new Subject { Id = 4, Name = "Data Structures and Algorithms", IsLecture = true },
-                new Subject { Id = 5, Name = "Computer Networks", IsLecture = true },
-                new Subject { Id = 6, Name = "Operating Systems", IsLecture = true },
-                new Subject { Id = 10, Name = "Software Engineering", IsLecture = true }
+                new Subject { Id = 1, Name = "OOP" },
+                new Subject { Id = 2, Name = "DB" },
+                new Subject { Id = 3, Name = "Programming Fundamentals" },
+                new Subject { Id = 4, Name = "Data Structures and Algorithms" },
+                new Subject { Id = 5, Name = "Computer Networks" },
+                new Subject { Id = 6, Name = "Operating Systems" },
+                new Subject { Id = 7, Name = "Software Engineering" }
             };
 
             var classrooms = new List<Classroom>
             {
-                new Classroom { Id = 1, Name = "306", Capacity = 100 },
-                new Classroom { Id = 2, Name = "43", Capacity = 70 },
-                new Classroom { Id = 3, Name = "221", Capacity = 40 },
-                new Classroom { Id = 4, Name = "01", Capacity = 100 },
-                new Classroom { Id = 5, Name = "203", Capacity = 32 },
-                new Classroom { Id = 6, Name = "202", Capacity = 32 }
+                new Classroom { Id = 1, Name = "30", Capacity = 100 },
+                new Classroom { Id = 2, Name = "31", Capacity = 70 }
             };
 
             var professors = new List<Teacher>
@@ -37,8 +35,8 @@ namespace CSPTimetable
                 new Teacher { Id = 3, Name = "Purple", Subjects = new List<Subject> { subjects[4] } },
                 new Teacher { Id = 4, Name = "Grey", Subjects = new List<Subject> { subjects[2] } },
                 new Teacher { Id = 5, Name = "White", Subjects = new List<Subject> { subjects[5] } },
-                new Teacher { Id = 7, Name = "Yellow", Subjects = new List<Subject> { subjects[6] } },
-                new Teacher { Id = 10, Name = "Red", Subjects = new List<Subject> { subjects[3] } },
+                new Teacher { Id = 6, Name = "Yellow", Subjects = new List<Subject> { subjects[6] } },
+                new Teacher { Id = 7, Name = "Red", Subjects = new List<Subject> { subjects[3] } },
             };
 
             var timeslots = new List<Timeslot>
